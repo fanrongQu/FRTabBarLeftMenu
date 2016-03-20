@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B14704D1C9EC559001B33D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B14704C1C9EC559001B33D9 /* main.m */; };
+		3B1470501C9EC559001B33D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B14704F1C9EC559001B33D9 /* AppDelegate.m */; };
+		3B1470531C9EC559001B33D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1470521C9EC559001B33D9 /* ViewController.m */; };
+		3B1470561C9EC559001B33D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1470541C9EC559001B33D9 /* Main.storyboard */; };
+		3B1470581C9EC559001B33D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B1470571C9EC559001B33D9 /* Assets.xcassets */; };
+		3B14705B1C9EC559001B33D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1470591C9EC559001B33D9 /* LaunchScreen.storyboard */; };
+		3B1470661C9EC559001B33D9 /* FRTabBarLeftMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1470651C9EC559001B33D9 /* FRTabBarLeftMenuTests.m */; };
+		3B1470711C9EC559001B33D9 /* FRTabBarLeftMenuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1470701C9EC559001B33D9 /* FRTabBarLeftMenuUITests.m */; };
+		3B14708E1C9EC5B8001B33D9 /* FRDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1470801C9EC5B8001B33D9 /* FRDrawerController.m */; };
+		3B14708F1C9EC5B8001B33D9 /* FRDropShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1470821C9EC5B8001B33D9 /* FRDropShadowView.m */; };
+		3B1470901C9EC5B8001B33D9 /* UIBarButtonItem+FR.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1470861C9EC5B8001B33D9 /* UIBarButtonItem+FR.m */; };
+		3B1470911C9EC5B8001B33D9 /* FRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1470881C9EC5B8001B33D9 /* FRNavigationController.m */; };
+		3B1470921C9EC5B8001B33D9 /* navigationbar_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B1470891C9EC5B8001B33D9 /* navigationbar_back@2x.png */; };
+		3B1470931C9EC5B8001B33D9 /* FRTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B14708B1C9EC5B8001B33D9 /* FRTabBarViewController.m */; };
+		3B1470941C9EC5B8001B33D9 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B14708D1C9EC5B8001B33D9 /* LeftMenuViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B1470621C9EC559001B33D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B1470401C9EC559001B33D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B1470471C9EC559001B33D9;
+			remoteInfo = FRTabBarLeftMenu;
+		};
+		3B14706D1C9EC559001B33D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B1470401C9EC559001B33D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B1470471C9EC559001B33D9;
+			remoteInfo = FRTabBarLeftMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B1470481C9EC559001B33D9 /* FRTabBarLeftMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRTabBarLeftMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B14704C1C9EC559001B33D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B14704E1C9EC559001B33D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3B14704F1C9EC559001B33D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3B1470511C9EC559001B33D9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3B1470521C9EC559001B33D9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3B1470551C9EC559001B33D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B1470571C9EC559001B33D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B14705A1C9EC559001B33D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B14705C1C9EC559001B33D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B1470611C9EC559001B33D9 /* FRTabBarLeftMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FRTabBarLeftMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B1470651C9EC559001B33D9 /* FRTabBarLeftMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRTabBarLeftMenuTests.m; sourceTree = "<group>"; };
+		3B1470671C9EC559001B33D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B14706C1C9EC559001B33D9 /* FRTabBarLeftMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FRTabBarLeftMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B1470701C9EC559001B33D9 /* FRTabBarLeftMenuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRTabBarLeftMenuUITests.m; sourceTree = "<group>"; };
+		3B1470721C9EC559001B33D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B14707F1C9EC5B8001B33D9 /* FRDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRDrawerController.h; sourceTree = "<group>"; };
+		3B1470801C9EC5B8001B33D9 /* FRDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRDrawerController.m; sourceTree = "<group>"; };
+		3B1470811C9EC5B8001B33D9 /* FRDropShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRDropShadowView.h; sourceTree = "<group>"; };
+		3B1470821C9EC5B8001B33D9 /* FRDropShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRDropShadowView.m; sourceTree = "<group>"; };
+		3B1470851C9EC5B8001B33D9 /* UIBarButtonItem+FR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+FR.h"; sourceTree = "<group>"; };
+		3B1470861C9EC5B8001B33D9 /* UIBarButtonItem+FR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+FR.m"; sourceTree = "<group>"; };
+		3B1470871C9EC5B8001B33D9 /* FRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRNavigationController.h; sourceTree = "<group>"; };
+		3B1470881C9EC5B8001B33D9 /* FRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRNavigationController.m; sourceTree = "<group>"; };
+		3B1470891C9EC5B8001B33D9 /* navigationbar_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_back@2x.png"; sourceTree = "<group>"; };
+		3B14708A1C9EC5B8001B33D9 /* FRTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRTabBarViewController.h; sourceTree = "<group>"; };
+		3B14708B1C9EC5B8001B33D9 /* FRTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRTabBarViewController.m; sourceTree = "<group>"; };
+		3B14708C1C9EC5B8001B33D9 /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
+		3B14708D1C9EC5B8001B33D9 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B1470451C9EC559001B33D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B14705E1C9EC559001B33D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B1470691C9EC559001B33D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B14703F1C9EC559001B33D9 = {
+			isa = PBXGroup;
+			children = (
+				3B14704A1C9EC559001B33D9 /* FRTabBarLeftMenu */,
+				3B1470641C9EC559001B33D9 /* FRTabBarLeftMenuTests */,
+				3B14706F1C9EC559001B33D9 /* FRTabBarLeftMenuUITests */,
+				3B1470491C9EC559001B33D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B1470491C9EC559001B33D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B1470481C9EC559001B33D9 /* FRTabBarLeftMenu.app */,
+				3B1470611C9EC559001B33D9 /* FRTabBarLeftMenuTests.xctest */,
+				3B14706C1C9EC559001B33D9 /* FRTabBarLeftMenuUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B14704A1C9EC559001B33D9 /* FRTabBarLeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				3B14704E1C9EC559001B33D9 /* AppDelegate.h */,
+				3B14704F1C9EC559001B33D9 /* AppDelegate.m */,
+				3B14707E1C9EC5B8001B33D9 /* FRDrawerViewController */,
+				3B1470831C9EC5B8001B33D9 /* FRNavigationController */,
+				3B14708A1C9EC5B8001B33D9 /* FRTabBarViewController.h */,
+				3B14708B1C9EC5B8001B33D9 /* FRTabBarViewController.m */,
+				3B14708C1C9EC5B8001B33D9 /* LeftMenuViewController.h */,
+				3B14708D1C9EC5B8001B33D9 /* LeftMenuViewController.m */,
+				3B1470511C9EC559001B33D9 /* ViewController.h */,
+				3B1470521C9EC559001B33D9 /* ViewController.m */,
+				3B1470541C9EC559001B33D9 /* Main.storyboard */,
+				3B1470571C9EC559001B33D9 /* Assets.xcassets */,
+				3B1470591C9EC559001B33D9 /* LaunchScreen.storyboard */,
+				3B14705C1C9EC559001B33D9 /* Info.plist */,
+				3B14704B1C9EC559001B33D9 /* Supporting Files */,
+			);
+			path = FRTabBarLeftMenu;
+			sourceTree = "<group>";
+		};
+		3B14704B1C9EC559001B33D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B14704C1C9EC559001B33D9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B1470641C9EC559001B33D9 /* FRTabBarLeftMenuTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B1470651C9EC559001B33D9 /* FRTabBarLeftMenuTests.m */,
+				3B1470671C9EC559001B33D9 /* Info.plist */,
+			);
+			path = FRTabBarLeftMenuTests;
+			sourceTree = "<group>";
+		};
+		3B14706F1C9EC559001B33D9 /* FRTabBarLeftMenuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3B1470701C9EC559001B33D9 /* FRTabBarLeftMenuUITests.m */,
+				3B1470721C9EC559001B33D9 /* Info.plist */,
+			);
+			path = FRTabBarLeftMenuUITests;
+			sourceTree = "<group>";
+		};
+		3B14707E1C9EC5B8001B33D9 /* FRDrawerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B14707F1C9EC5B8001B33D9 /* FRDrawerController.h */,
+				3B1470801C9EC5B8001B33D9 /* FRDrawerController.m */,
+				3B1470811C9EC5B8001B33D9 /* FRDropShadowView.h */,
+				3B1470821C9EC5B8001B33D9 /* FRDropShadowView.m */,
+			);
+			path = FRDrawerViewController;
+			sourceTree = "<group>";
+		};
+		3B1470831C9EC5B8001B33D9 /* FRNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				3B1470841C9EC5B8001B33D9 /* Category */,
+				3B1470871C9EC5B8001B33D9 /* FRNavigationController.h */,
+				3B1470881C9EC5B8001B33D9 /* FRNavigationController.m */,
+				3B1470891C9EC5B8001B33D9 /* navigationbar_back@2x.png */,
+			);
+			path = FRNavigationController;
+			sourceTree = "<group>";
+		};
+		3B1470841C9EC5B8001B33D9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				3B1470851C9EC5B8001B33D9 /* UIBarButtonItem+FR.h */,
+				3B1470861C9EC5B8001B33D9 /* UIBarButtonItem+FR.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B1470471C9EC559001B33D9 /* FRTabBarLeftMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B1470751C9EC559001B33D9 /* Build configuration list for PBXNativeTarget "FRTabBarLeftMenu" */;
+			buildPhases = (
+				3B1470441C9EC559001B33D9 /* Sources */,
+				3B1470451C9EC559001B33D9 /* Frameworks */,
+				3B1470461C9EC559001B33D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FRTabBarLeftMenu;
+			productName = FRTabBarLeftMenu;
+			productReference = 3B1470481C9EC559001B33D9 /* FRTabBarLeftMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B1470601C9EC559001B33D9 /* FRTabBarLeftMenuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B1470781C9EC559001B33D9 /* Build configuration list for PBXNativeTarget "FRTabBarLeftMenuTests" */;
+			buildPhases = (
+				3B14705D1C9EC559001B33D9 /* Sources */,
+				3B14705E1C9EC559001B33D9 /* Frameworks */,
+				3B14705F1C9EC559001B33D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B1470631C9EC559001B33D9 /* PBXTargetDependency */,
+			);
+			name = FRTabBarLeftMenuTests;
+			productName = FRTabBarLeftMenuTests;
+			productReference = 3B1470611C9EC559001B33D9 /* FRTabBarLeftMenuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3B14706B1C9EC559001B33D9 /* FRTabBarLeftMenuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B14707B1C9EC559001B33D9 /* Build configuration list for PBXNativeTarget "FRTabBarLeftMenuUITests" */;
+			buildPhases = (
+				3B1470681C9EC559001B33D9 /* Sources */,
+				3B1470691C9EC559001B33D9 /* Frameworks */,
+				3B14706A1C9EC559001B33D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B14706E1C9EC559001B33D9 /* PBXTargetDependency */,
+			);
+			name = FRTabBarLeftMenuUITests;
+			productName = FRTabBarLeftMenuUITests;
+			productReference = 3B14706C1C9EC559001B33D9 /* FRTabBarLeftMenuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B1470401C9EC559001B33D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = QuFanrong;
+				TargetAttributes = {
+					3B1470471C9EC559001B33D9 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					3B1470601C9EC559001B33D9 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 3B1470471C9EC559001B33D9;
+					};
+					3B14706B1C9EC559001B33D9 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 3B1470471C9EC559001B33D9;
+					};
+				};
+			};
+			buildConfigurationList = 3B1470431C9EC559001B33D9 /* Build configuration list for PBXProject "FRTabBarLeftMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B14703F1C9EC559001B33D9;
+			productRefGroup = 3B1470491C9EC559001B33D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B1470471C9EC559001B33D9 /* FRTabBarLeftMenu */,
+				3B1470601C9EC559001B33D9 /* FRTabBarLeftMenuTests */,
+				3B14706B1C9EC559001B33D9 /* FRTabBarLeftMenuUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B1470461C9EC559001B33D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B14705B1C9EC559001B33D9 /* LaunchScreen.storyboard in Resources */,
+				3B1470581C9EC559001B33D9 /* Assets.xcassets in Resources */,
+				3B1470561C9EC559001B33D9 /* Main.storyboard in Resources */,
+				3B1470921C9EC5B8001B33D9 /* navigationbar_back@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B14705F1C9EC559001B33D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B14706A1C9EC559001B33D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B1470441C9EC559001B33D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1470901C9EC5B8001B33D9 /* UIBarButtonItem+FR.m in Sources */,
+				3B14708E1C9EC5B8001B33D9 /* FRDrawerController.m in Sources */,
+				3B1470531C9EC559001B33D9 /* ViewController.m in Sources */,
+				3B1470911C9EC5B8001B33D9 /* FRNavigationController.m in Sources */,
+				3B1470941C9EC5B8001B33D9 /* LeftMenuViewController.m in Sources */,
+				3B1470501C9EC559001B33D9 /* AppDelegate.m in Sources */,
+				3B14704D1C9EC559001B33D9 /* main.m in Sources */,
+				3B1470931C9EC5B8001B33D9 /* FRTabBarViewController.m in Sources */,
+				3B14708F1C9EC5B8001B33D9 /* FRDropShadowView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B14705D1C9EC559001B33D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1470661C9EC559001B33D9 /* FRTabBarLeftMenuTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B1470681C9EC559001B33D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1470711C9EC559001B33D9 /* FRTabBarLeftMenuUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B1470631C9EC559001B33D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B1470471C9EC559001B33D9 /* FRTabBarLeftMenu */;
+			targetProxy = 3B1470621C9EC559001B33D9 /* PBXContainerItemProxy */;
+		};
+		3B14706E1C9EC559001B33D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B1470471C9EC559001B33D9 /* FRTabBarLeftMenu */;
+			targetProxy = 3B14706D1C9EC559001B33D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3B1470541C9EC559001B33D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1470551C9EC559001B33D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B1470591C9EC559001B33D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B14705A1C9EC559001B33D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B1470731C9EC559001B33D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3B1470741C9EC559001B33D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B1470761C9EC559001B33D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FRTabBarLeftMenu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgxt.www.FRTabBarLeftMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3B1470771C9EC559001B33D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FRTabBarLeftMenu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgxt.www.FRTabBarLeftMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3B1470791C9EC559001B33D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FRTabBarLeftMenuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgxt.www.FRTabBarLeftMenuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FRTabBarLeftMenu.app/FRTabBarLeftMenu";
+			};
+			name = Debug;
+		};
+		3B14707A1C9EC559001B33D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FRTabBarLeftMenuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgxt.www.FRTabBarLeftMenuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FRTabBarLeftMenu.app/FRTabBarLeftMenu";
+			};
+			name = Release;
+		};
+		3B14707C1C9EC559001B33D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FRTabBarLeftMenuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgxt.www.FRTabBarLeftMenuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FRTabBarLeftMenu;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		3B14707D1C9EC559001B33D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FRTabBarLeftMenuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgxt.www.FRTabBarLeftMenuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FRTabBarLeftMenu;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B1470431C9EC559001B33D9 /* Build configuration list for PBXProject "FRTabBarLeftMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B1470731C9EC559001B33D9 /* Debug */,
+				3B1470741C9EC559001B33D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B1470751C9EC559001B33D9 /* Build configuration list for PBXNativeTarget "FRTabBarLeftMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B1470761C9EC559001B33D9 /* Debug */,
+				3B1470771C9EC559001B33D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3B1470781C9EC559001B33D9 /* Build configuration list for PBXNativeTarget "FRTabBarLeftMenuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B1470791C9EC559001B33D9 /* Debug */,
+				3B14707A1C9EC559001B33D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3B14707B1C9EC559001B33D9 /* Build configuration list for PBXNativeTarget "FRTabBarLeftMenuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B14707C1C9EC559001B33D9 /* Debug */,
+				3B14707D1C9EC559001B33D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B1470401C9EC559001B33D9 /* Project object */;
+}
