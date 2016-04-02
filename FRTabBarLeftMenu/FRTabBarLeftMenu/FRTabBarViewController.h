@@ -5,10 +5,10 @@
 //  Copyright © 2015年 FR. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "FRTabBarController.h"
 #import "FRDrawerController.h"
 
-@interface FRTabBarViewController : UITabBarController<FRDrawerControllerChild, FRDrawerControllerPresenting>
+@interface FRTabBarViewController : FRTabBarController<FRDrawerControllerChild, FRDrawerControllerPresenting>
 
 @property(nonatomic, weak) FRDrawerController *drawer;
 

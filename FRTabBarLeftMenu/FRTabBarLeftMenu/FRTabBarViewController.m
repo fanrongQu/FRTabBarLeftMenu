@@ -32,51 +32,109 @@
     
     
     ViewController *mainVC = [[ViewController alloc]init];
-    [self addChildVc:mainVC title:@"首页" image:@"tabbar_home" selectedImage:@"tabbar_home_selected"];
+    FRNavigationController *mainNav = [[FRNavigationController alloc] initWithRootViewController:mainVC];
+    mainNav.delegate = self;
+    [self addChildViewController:mainNav title:@"首页" image:@"tabbar_home" selectedImage:@"tabbar_home_selected"];
     
     ViewController *health = [[ViewController alloc]init];
-    [self addChildVc:health title:@"健康" image:@"tabbar_health" selectedImage:@"tabbar_health_selected"];
+    FRNavigationController *healthNav = [[FRNavigationController alloc] initWithRootViewController:health];
+    healthNav.delegate = self;
+    [self addChildViewController:healthNav title:@"健康" image:@"tabbar_health" selectedImage:@"tabbar_health_selected"];
     
     ViewController *life = [[ViewController alloc]init];
-    [self addChildVc:life title:@"生活" image:@"tabbar_life" selectedImage:@"tabbar_life_selected"];
+    FRNavigationController *lifeNav = [[FRNavigationController alloc] initWithRootViewController:life];
+    lifeNav.delegate = self;
+    [self addChildViewController:lifeNav title:@"生活" image:@"tabbar_life" selectedImage:@"tabbar_life_selected"];
     
     ViewController *profile = [[ViewController alloc]init];
-    [self addChildVc:profile title:@"我" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
+    FRNavigationController *profileNav = [[FRNavigationController alloc] initWithRootViewController:profile];
+    profileNav.delegate = self;
+    [self addChildViewController:profileNav title:@"我的" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
     
 }
 
-/**
- *  添加一个子控制器
- *
- *  @param childVc       子控制器
- *  @param title         标题
- *  @param image         图片
- *  @param selectedImage 选中的图片
- */
-- (void)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
-{
-    // 设置子控制器的文字
-    childVc.title = title; // 同时设置tabbar和navigationBar的文字
+
+
+
+
+- (UIColor*)mostColorWithImage:(UIImage *)image{
     
-    // 设置子控制器的图片
-    childVc.tabBarItem.image = [UIImage imageNamed:image];
- 
-    childVc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-  
+    int bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaPremultipliedLast;
     
-    // 设置文字的样式
-    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-    textAttrs[NSForegroundColorAttributeName] = [UIColor colorWithRed:135/255.0 green:135/255.0 blue:135/255.0 alpha:1];
-    NSMutableDictionary *selectTextAttrs = [NSMutableDictionary dictionary];
-    selectTextAttrs[NSForegroundColorAttributeName] = [UIColor colorWithRed:241/255.0 green:0 blue:0 alpha:1];
-    [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
-    [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
+    //第一步 先把图片缩小 加快计算速度. 但越小结果误差可能越大
     
-    // 先给外面传进来的小控制器 包装 一个导航控制器
-    FRNavigationController *nav = [[FRNavigationController alloc] initWithRootViewController:childVc];
-    nav.delegate = self;
-    // 添加为子控制器
-    [self addChildViewController:nav];
+    CGSize thumbSize=CGSizeMake(50, 50);
+    
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    
+    CGContextRef context = CGBitmapContextCreate(NULL,
+                                                 thumbSize.width,thumbSize.height,
+                                                 8,//bits per component
+                                                 thumbSize.width*4,
+                                                 colorSpace,bitmapInfo);
+    
+    
+    
+    CGRect drawRect = CGRectMake(0, 0, thumbSize.width, thumbSize.height);
+    
+    CGContextDrawImage(context, drawRect, image.CGImage);
+    
+    CGColorSpaceRelease(colorSpace);
+    
+    
+    //第二步 取每个点的像素值
+    
+    unsigned char* data = CGBitmapContextGetData (context);
+    
+    if (data == NULL) return nil;
+    
+    NSCountedSet *cls=[NSCountedSet setWithCapacity:thumbSize.width*thumbSize.height];
+    
+    for (int x=0; x<thumbSize.width; x++) {
+        
+        for (int y=0; y<thumbSize.height; y++) {
+            
+            int offset = 4*(x*y);
+            
+            int red = data[offset];
+            
+            int green = data[offset+1];
+            
+            int blue = data[offset+2];
+            
+            int alpha =  data[offset+3];
+            
+            NSArray *clr=@[@(red),@(green),@(blue),@(alpha)];
+            //剔除透明区域
+            if (alpha != 0) {
+                [cls addObject:clr];
+            }
+        }
+        
+    }
+    
+    CGContextRelease(context);
+    
+    //第三步 找到出现次数最多的那个颜色
+    
+    NSEnumerator *enumerator = [cls objectEnumerator];
+    
+    NSArray *curColor = nil;
+    NSArray *MaxColor=nil;
+    
+    NSUInteger MaxCount=0;
+    
+    while ( (curColor = [enumerator nextObject]) != nil ) {
+        NSUInteger tmpCount = [cls countForObject:curColor];
+        
+        if ( tmpCount < MaxCount ) continue;
+        
+        MaxCount=tmpCount;
+        
+        MaxColor=curColor;
+    }
+    return [UIColor colorWithRed:([MaxColor[0] intValue]/255.0f) green:([MaxColor[1] intValue]/255.0f) blue:([MaxColor[2] intValue]/255.0f) alpha:([MaxColor[3] intValue]/255.0f)];
+    
 }
 
 #pragma mark -- UINavigationControllerDelegate 在这里实现对菜单按钮的隐藏与显示

@@ -11,7 +11,7 @@
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 
 //导航栏颜色
-#define navigationBarColor [UIColor blueColor]
+#define navigationBarColor [UIColor cyanColor]
 //导航栏标题字体颜色
 #define navigationBarTitleColor [UIColor whiteColor]
 // 背景视图起始frame.x
