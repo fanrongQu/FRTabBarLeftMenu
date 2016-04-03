@@ -26,6 +26,6 @@ FRTabBarController可以根据Item的图标颜色获取Item字体色，并且Ite
  *  @param selectedImage   子控制器tabBarItem选中图片
  */
 
-(void)addChildViewController:(UINavigationController *)childController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage;
+-(void)addChildViewController:(UINavigationController *)childController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage;
 
 ps：title、image、selectedImage为childController的rootViewController的title、image、selectedImage，即tabbar上的UIViewController
