@@ -1,6 +1,6 @@
 # FRTabBarLeftMenu
 带侧滑菜单的FRTabBarController  LeftMenu 
-在第一试图都能够调出左侧菜单并且可以实现当前tabBar显示视图跳转到对应页面
+在第一视图都能够调出左侧菜单并且可以实现当前tabBar显示视图跳转到对应页面
 
     [self.drawer close];
      UITabBarController *tabbarController = (UITabBarController *)self.drawer.centerViewController;
@@ -25,6 +25,7 @@ FRTabBarController可以根据Item的图标颜色获取Item字体色，并且Ite
  *  @param image           子控制器tabBarItem图片
  *  @param selectedImage   子控制器tabBarItem选中图片
  */
+
 - (void)addChildViewController:(UINavigationController *)childController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage;
 
 ps：title、image、selectedImage为childController的rootViewController的title、image、selectedImage，即tabbar上的UIViewController
