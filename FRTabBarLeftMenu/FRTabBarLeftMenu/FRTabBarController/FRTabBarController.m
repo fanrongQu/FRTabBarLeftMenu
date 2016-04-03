@@ -50,7 +50,7 @@
 
 
 
-- (void)addChildViewController:(UINavigationController *)childController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
+- (void)addChildViewController:(UIViewController *)childController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
     UIViewController *viewController = childController.childViewControllers[0];
     //标题
     viewController.title = title;

@@ -18,6 +18,6 @@
  *  @param image           子控制器tabBarItem图片
  *  @param selectedImage   子控制器tabBarItem选中图片
  */
-- (void)addChildViewController:(UINavigationController *)childController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage;
+- (void)addChildViewController:(UIViewController *)childController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage;
 
 @end
