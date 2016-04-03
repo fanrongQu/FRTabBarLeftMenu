@@ -11,7 +11,7 @@
 @interface FRTabBarController : UITabBarController
 
 /**
- *  为tabBarController添加子控制器
+ *  为tabBarController添加子控制器UIViewController
  *
  *  @param childController 子控制器
  *  @param title           子控制器标题
@@ -19,5 +19,15 @@
  *  @param selectedImage   子控制器tabBarItem选中图片
  */
 - (void)addChildViewController:(UIViewController *)childController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage;
+
+/**
+ *  为tabBarController添加子控制器UINavigationController
+ *
+ *  @param navigationController 导航控制器
+ *  @param title                navigationController的rootViewController的title
+ *  @param image                navigationController的rootViewController的image
+ *  @param selectedImage        navigationController的rootViewController的selectedImage
+ */
+- (void)addNavigationController:(UINavigationController *)navigationController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage;
 
 @end

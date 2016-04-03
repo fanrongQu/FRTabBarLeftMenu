@@ -50,18 +50,31 @@
 
 
 
-- (void)addChildViewController:(UIViewController *)childController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
-    UIViewController *viewController = childController.childViewControllers[0];
+- (void)addNavigationController:(UINavigationController *)navigationController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
+    UIViewController *childViewController = navigationController.childViewControllers[0];
     //标题
-    viewController.title = title;
+    childViewController.title = title;
     
     //图片
-    viewController.tabBarItem.image = [UIImage imageNamed:image];
-    viewController.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    childViewController.tabBarItem.image = [UIImage imageNamed:image];
+    childViewController.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    [self addChildViewController:navigationController];
+    // 3.添加tabbar内部的按钮
+    [self.customTabBar addTabBarItemWithItem:childViewController.tabBarItem];
+}
+
+- (void)addChildViewController:(UIViewController *)childController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
+    //标题
+    childController.title = title;
+    
+    //图片
+    childController.tabBarItem.image = [UIImage imageNamed:image];
+    childController.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     [self addChildViewController:childController];
     // 3.添加tabbar内部的按钮
-    [self.customTabBar addTabBarItemWithItem:viewController.tabBarItem];
+    [self.customTabBar addTabBarItemWithItem:childController.tabBarItem];
 }
 
 - (void)viewWillAppear:(BOOL)animated
