@@ -34,22 +34,22 @@
     ViewController *mainVC = [[ViewController alloc]init];
     FRNavigationController *mainNav = [[FRNavigationController alloc] initWithRootViewController:mainVC];
     mainNav.delegate = self;
-    [self addNavigationController:mainNav title:@"首页" image:@"tabbar_home" selectedImage:@"tabbar_home_selected"];
+    [self addChildNavigationController:mainNav title:@"首页" image:@"tabbar_home" selectedImage:@"tabbar_home_selected"];
     
     ViewController *health = [[ViewController alloc]init];
     FRNavigationController *healthNav = [[FRNavigationController alloc] initWithRootViewController:health];
     healthNav.delegate = self;
-    [self addNavigationController:healthNav title:@"健康" image:@"tabbar_health" selectedImage:@"tabbar_health_selected"];
+    [self addChildNavigationController:healthNav title:@"健康" image:@"tabbar_health" selectedImage:@"tabbar_health_selected"];
     
     ViewController *life = [[ViewController alloc]init];
     FRNavigationController *lifeNav = [[FRNavigationController alloc] initWithRootViewController:life];
     lifeNav.delegate = self;
-    [self addNavigationController:lifeNav title:@"生活" image:@"tabbar_life" selectedImage:@"tabbar_life_selected"];
+    [self addChildNavigationController:lifeNav title:@"生活" image:@"tabbar_life" selectedImage:@"tabbar_life_selected"];
     
     ViewController *profile = [[ViewController alloc]init];
     FRNavigationController *profileNav = [[FRNavigationController alloc] initWithRootViewController:profile];
     profileNav.delegate = self;
-    [self addNavigationController:profileNav title:@"我的" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
+    [self addChildNavigationController:profileNav title:@"我的" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
     
 }
 

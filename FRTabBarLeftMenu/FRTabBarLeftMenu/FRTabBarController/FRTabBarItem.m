@@ -85,11 +85,10 @@
  */
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    
     //根据图片设置文字颜色
-    UIColor *normalColor = [self mostColorWithImage:self.tabBarItem.image];
+    UIColor *normalColor = self.normalColor ? self.normalColor : [self mostColorWithImage:self.tabBarItem.image];
     [self setTitleColor:normalColor forState:UIControlStateNormal];
-    UIColor *selectedColor = [self mostColorWithImage:self.tabBarItem.selectedImage];
+    UIColor *selectedColor = self.selectedColor ? self.selectedColor : [self mostColorWithImage:self.tabBarItem.selectedImage];
     [self setTitleColor:selectedColor forState:UIControlStateSelected];
     
     // 设置文字
@@ -116,7 +115,10 @@
  */
 - (UIImage *)compressImage:(UIImage *)image
 {
-    CGSize size = {23, 23};
+    CGSize size = image.size;
+    CGFloat width = 20;
+    CGFloat height = width * size.height / size.width;
+    size = CGSizeMake(width, height);
     UIGraphicsBeginImageContext(size);
     CGRect rect = {{0,0}, size};
     [image drawInRect:rect];

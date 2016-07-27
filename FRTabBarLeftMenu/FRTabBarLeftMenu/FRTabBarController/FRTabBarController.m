@@ -1,6 +1,6 @@
 //
 //  FRTabBarController.m
-//  爱鲜蜂
+//  RTabBarController-Demo
 //
 //  Created by 1860 on 16/4/1.
 //  Copyright © 2016年 FanrongQu. All rights reserved.
@@ -48,9 +48,12 @@
     self.selectedIndex = to;
 }
 
+- (void)setTabBarItemNormalColor:(UIColor *)normalColor selectedColor:(UIColor *)selectedColor {
+    self.customTabBar.normalColor = normalColor;
+    self.customTabBar.selectedColor = selectedColor;
+}
 
-
-- (void)addNavigationController:(UINavigationController *)navigationController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
+- (void)addChildNavigationController:(UINavigationController *)navigationController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
     UIViewController *childViewController = navigationController.childViewControllers[0];
     //标题
     childViewController.title = title;
@@ -64,17 +67,17 @@
     [self.customTabBar addTabBarItemWithItem:childViewController.tabBarItem];
 }
 
-- (void)addChildViewController:(UIViewController *)childController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
+- (void)addChildViewController:(UIViewController *)childViewController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
     //标题
-    childController.title = title;
+    childViewController.title = title;
     
     //图片
-    childController.tabBarItem.image = [UIImage imageNamed:image];
-    childController.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    childViewController.tabBarItem.image = [UIImage imageNamed:image];
+    childViewController.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-    [self addChildViewController:childController];
+    [self addChildViewController:childViewController];
     // 3.添加tabbar内部的按钮
-    [self.customTabBar addTabBarItemWithItem:childController.tabBarItem];
+    [self.customTabBar addTabBarItemWithItem:childViewController.tabBarItem];
 }
 
 - (void)viewWillAppear:(BOOL)animated
