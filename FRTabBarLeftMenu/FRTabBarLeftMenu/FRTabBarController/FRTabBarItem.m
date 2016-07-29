@@ -116,7 +116,10 @@
 - (UIImage *)compressImage:(UIImage *)image
 {
     CGSize size = image.size;
-    CGFloat width = 20;
+    CGFloat width = 21;
+    if (size.width <= width && size.height <= width) {
+        return image;
+    }
     CGFloat height = width * size.height / size.width;
     size = CGSizeMake(width, height);
     UIGraphicsBeginImageContext(size);
