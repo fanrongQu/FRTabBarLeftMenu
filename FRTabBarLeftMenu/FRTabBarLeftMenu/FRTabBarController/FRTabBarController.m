@@ -70,6 +70,7 @@
 - (void)addChildViewController:(UIViewController *)childViewController title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
     //标题
     childViewController.title = title;
+    childViewController.tabBarItem.title = title;
     
     //图片
     childViewController.tabBarItem.image = [UIImage imageNamed:image];
